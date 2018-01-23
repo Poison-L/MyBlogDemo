@@ -19,7 +19,7 @@ class Category(models.Model):
     Django 内置的全部类型可查看文档：
     https://docs.djangoproject.com/en/1.10/ref/models/fields/#field-types
     """
-    name = models.CharField(max_length=100)
+    name = models.CharField(verbose_name='类别', max_length=100)
 
     class Meta:
         verbose_name = '类别'
@@ -35,7 +35,7 @@ class Tag(models.Model):
     标签 Tag 也比较简单，和 Category 一样。
     再次强调一定要继承 models.Model 类！
     """
-    name = models.CharField(max_length=100)
+    name = models.CharField(verbose_name='标签', max_length=100)
 
     class Meta:
         verbose_name = '标签'
