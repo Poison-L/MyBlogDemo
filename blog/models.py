@@ -84,6 +84,7 @@ class Post(models.Model):
     author = models.ForeignKey(verbose_name='发布者', to=User)
 
     class Meta:
+        verbose_name = '文章'
         verbose_name_plural = '文章'
         ordering = ['-created_time']
 
