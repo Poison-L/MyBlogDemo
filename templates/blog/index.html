@@ -55,8 +55,8 @@
     完善的分页导航
     {% endcomment %}
     {% if is_paginated %}
-        <div class="pagination">
-            <ul>
+        <nav aria-label="...">
+            <ul class="pager">
                 {% if first %}
                     <li><a href="?page=1">1</a></li>
                 {% endif %}
@@ -81,6 +81,6 @@
                     <li><a href="?page={{ paginator.num_pages }}">{{ paginator.num_pages }}</a></li>
                 {% endif %}
             </ul>
-        </div>
+        </nav>
     {% endif %}
 {% endblock main %}
